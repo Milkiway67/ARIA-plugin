@@ -1,84 +1,104 @@
 {
   "files": [
     {
-      "name": "Atelier_ IA et l’évaluation_JP HELHa.pptx",
-      "path": "references/Atelier_ IA et l’évaluation_JP HELHa.pptx"
+      "name": "atelier-ia-evaluation-helha-2024.pptx",
+      "path": "references/atelier-ia-evaluation-helha-2024.pptx",
+      "title": "Atelier_ IA et l’évaluation_JP HELHa"
     },
     {
-      "name": "CAST - 2024 - Directives de la conception universelle de l’apprentissage.pdf",
-      "path": "references/CAST - 2024 - Directives de la conception universelle de l’apprentissage.pdf"
+      "name": "cabana-piche-2025-balises-iag-4-modalites-evaluatives.pdf",
+      "path": "references/cabana-piche-2025-balises-iag-4-modalites-evaluatives.pdf",
+      "title": "balises_utlisation_IA_4_modalites_evaluatives_SSF_UdeS"
     },
     {
-      "name": "CahierLLL_IAG_02.pdf",
-      "path": "references/CahierLLL_IAG_02.pdf"
+      "name": "cast-2024-directives-conception-universelle-apprentissage.pdf",
+      "path": "references/cast-2024-directives-conception-universelle-apprentissage.pdf",
+      "title": "CAST - 2024 - Directives de la conception universelle de l’apprentissage"
     },
     {
-      "name": "Consignes Atelier IA et évaluation.pdf",
-      "path": "references/Consignes Atelier IA et évaluation.pdf"
+      "name": "consignes-atelier-ia-evaluation-helha-2024.pdf",
+      "path": "references/consignes-atelier-ia-evaluation-helha-2024.pdf",
+      "title": "Consignes Atelier IA et évaluation"
     },
     {
-      "name": "Evaluation-inclusive.pdf",
-      "path": "references/Evaluation-inclusive.pdf"
+      "name": "decamps-2024-grille-vulnerabilites-evaluation-ia.pdf",
+      "path": "references/decamps-2024-grille-vulnerabilites-evaluation-ia.pdf",
+      "title": "Grille_ IA etl’évaluation_JP HELHa"
     },
     {
-      "name": "Evaluer les apprentissages à l'ère de l'IAG.pdf",
-      "path": "references/Evaluer les apprentissages à l'ère de l'IAG.pdf"
+      "name": "edhuman-quand-ia-s-invite-dans-evaluation.pdf",
+      "path": "references/edhuman-quand-ia-s-invite-dans-evaluation.pdf",
+      "title": "Quand l’IA s’invite dans l’évaluation une aide précieuse pour enseignants et élèves. -"
     },
     {
-      "name": "Evaluer à l'heure de l'IA.pdf",
-      "path": "references/Evaluer à l'heure de l'IA.pdf"
+      "name": "evaluer-apprentissages-ere-iag-10-strategies.pdf",
+      "path": "references/evaluer-apprentissages-ere-iag-10-strategies.pdf",
+      "title": "Evaluer les apprentissages à l'ère de l'IAG"
     },
     {
-      "name": "GUIDE+DE+L'ÉVALUATION+PAR+LES+PAIRS+DANS+L’ENSEIGNEMENT+SUPÉRIEUR+(4).pdf",
-      "path": "references/GUIDE+DE+L'ÉVALUATION+PAR+LES+PAIRS+DANS+L’ENSEIGNEMENT+SUPÉRIEUR+(4).pdf"
+      "name": "grille-analyse-bonnes-pratiques-evaluatives-iag.pdf",
+      "path": "references/grille-analyse-bonnes-pratiques-evaluatives-iag.pdf",
+      "title": "Grille_d_analyse__valautionIA"
     },
     {
-      "name": "Grille_ IA etl’évaluation_JP HELHa.pdf",
-      "path": "references/Grille_ IA etl’évaluation_JP HELHa.pdf"
+      "name": "guide-evaluation-par-les-pairs-enseignement-superieur.pdf",
+      "path": "references/guide-evaluation-par-les-pairs-enseignement-superieur.pdf",
+      "title": "GUIDE+DE+L'ÉVALUATION+PAR+LES+PAIRS+DANS+L’ENSEIGNEMENT+SUPÉRIEUR+(4)"
     },
     {
-      "name": "Grille_d_analyse__valautionIA.pdf",
-      "path": "references/Grille_d_analyse__valautionIA.pdf"
+      "name": "guide-integration-ia-enseignement-evaluation.pptx",
+      "path": "references/guide-integration-ia-enseignement-evaluation.pptx",
+      "title": "guide-utilisation-IA-enseignement-evaluation"
     },
     {
-      "name": "Guide pédagogique Cadre ARIA_Version mai2026.pdf",
-      "path": "references/Guide pédagogique Cadre ARIA_Version mai2026.pdf"
+      "name": "guide-pedagogique-cadre-aria-2026-05.pdf",
+      "path": "references/guide-pedagogique-cadre-aria-2026-05.pdf",
+      "title": "Guide pédagogique Cadre ARIA_Version mai2026"
     },
     {
-      "name": "Peters - 2025 Redefining assessment tasks.pdf",
-      "path": "references/Peters - 2025 Redefining assessment tasks.pdf"
+      "name": "louvain-learning-lab-2024-integrer-iag-strategies-pedagogiques.pdf",
+      "path": "references/louvain-learning-lab-2024-integrer-iag-strategies-pedagogiques.pdf",
+      "title": "CahierLLL_IAG_02"
     },
     {
-      "name": "Quand l’IA s’invite dans l’évaluation une aide précieuse pour enseignants et élèves. -.pdf",
-      "path": "references/Quand l’IA s’invite dans l’évaluation une aide précieuse pour enseignants et élèves. -.pdf"
+      "name": "modele-aria-article-evaluer-enseignement-superieur-ere-ia.pdf",
+      "path": "references/modele-aria-article-evaluer-enseignement-superieur-ere-ia.pdf",
+      "title": "Évaluer en enseignement supérieur à l’ère de l’IA . Le modèle ARIA comme levier de transformation pédagogique (1)-1"
     },
     {
-      "name": "Ressources_ Atelier_Evaluations_IA.pptx",
-      "path": "references/Ressources_ Atelier_Evaluations_IA.pptx"
+      "name": "pechard-evaluation-inclusive.pdf",
+      "path": "references/pechard-evaluation-inclusive.pdf",
+      "title": "Evaluation-inclusive"
     },
     {
-      "name": "Saint Anne - 2025 - POLITIQUE INSTITUTIONNELLE SUR L’UTILISATION.pdf",
-      "path": "references/Saint Anne - 2025 - POLITIQUE INSTITUTIONNELLE SUR L’UTILISATION.pdf"
+      "name": "peters-angelov-2025-redefining-assessment-tasks.pdf",
+      "path": "references/peters-angelov-2025-redefining-assessment-tasks.pdf",
+      "title": "Peters - 2025 Redefining assessment tasks"
     },
     {
-      "name": "Taxonomie-de-Bloom-IA.pdf",
-      "path": "references/Taxonomie-de-Bloom-IA.pdf"
+      "name": "ressources-atelier-evaluations-ia.pptx",
+      "path": "references/ressources-atelier-evaluations-ia.pptx",
+      "title": "Ressources_ Atelier_Evaluations_IA"
     },
     {
-      "name": "balises_utlisation_IA_4_modalites_evaluatives_SSF_UdeS.pdf",
-      "path": "references/balises_utlisation_IA_4_modalites_evaluatives_SSF_UdeS.pdf"
+      "name": "sana-yan-2022-interleaving-retrieval-practice.pdf",
+      "path": "references/sana-yan-2022-interleaving-retrieval-practice.pdf",
+      "title": "sana-yan-2022-interleaving-retrieval-practice-promotes-science-learning"
     },
     {
-      "name": "guide-utilisation-IA-enseignement-evaluation.pptx",
-      "path": "references/guide-utilisation-IA-enseignement-evaluation.pptx"
+      "name": "taxonomie-bloom-ia-oregon-state-2023.pdf",
+      "path": "references/taxonomie-bloom-ia-oregon-state-2023.pdf",
+      "title": "Taxonomie-de-Bloom-IA"
     },
     {
-      "name": "sana-yan-2022-interleaving-retrieval-practice-promotes-science-learning.pdf",
-      "path": "references/sana-yan-2022-interleaving-retrieval-practice-promotes-science-learning.pdf"
+      "name": "udes-evaluer-ere-ia-guide.pdf",
+      "path": "references/udes-evaluer-ere-ia-guide.pdf",
+      "title": "Evaluer à l'heure de l'IA"
     },
     {
-      "name": "Évaluer en enseignement supérieur à l’ère de l’IA . Le modèle ARIA comme levier de transformation pédagogique (1)-1.pdf",
-      "path": "references/Évaluer en enseignement supérieur à l’ère de l’IA . Le modèle ARIA comme levier de transformation pédagogique (1)-1.pdf"
+      "name": "universite-sainte-anne-2025-politique-ia.pdf",
+      "path": "references/universite-sainte-anne-2025-politique-ia.pdf",
+      "title": "Saint Anne - 2025 - POLITIQUE INSTITUTIONNELLE SUR L’UTILISATION"
     }
   ],
   "guidelines": "Resolve each files[].path relative to the directory containing this skill's SKILL.md (the skill root), not this index's lookup/ directory or the current working directory. Use that directory for filesystem reads or append the path unchanged to the skill's root resource URI. This index is not a complete inventory of the plugin's files. If a needed file is absent from this index or cannot be found or read at its indexed path, continue normal file discovery using the skill's available file listing or installed files; do not stop or conclude that the file is unavailable based on this index alone. This index is primarily a GPT migration helper that maps original GPT upload names to packaged filenames in the plugin."

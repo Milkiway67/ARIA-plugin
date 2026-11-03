@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "aria",
-  "version": "0.48.0",
+  "version": "0.48.1",
   "description": "Un assistant conversationnel pour renforcer la validité des évaluations et valoriser les compétences humaines et intégrer l’IA de manière éthique.",
   "author": {
     "name": "Sandrine DECAMPS"

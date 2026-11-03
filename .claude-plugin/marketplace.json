@@ -9,7 +9,7 @@
       "name": "aria",
       "source": "./",
       "description": "Transformer l’évaluation à l’ère de l’IA : accompagnement en quatre étapes (Analyser, Repenser, Intégrer, Accompagner).",
-      "version": "0.48.0",
+      "version": "0.48.1",
       "category": "education"
     }
   ]

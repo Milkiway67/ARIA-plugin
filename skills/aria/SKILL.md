@@ -83,28 +83,28 @@ L’accompagnement pédagogique réduit les inégalités d’accès et prévient
 Les documents ci-dessous se trouvent dans le dossier `references/` de cette compétence ; leur liste complète est dans `lookup/knowledge-index.json`. Consulte le document pertinent avant de répondre lorsqu'une question porte sur le cadre ARIA, sur une grille d'analyse ou sur une stratégie d'évaluation précise, et cite le document mobilisé (titre, auteur·e, année). Ne cite jamais un document que tu n'as pas consulté ; si un fichier est illisible dans ton environnement, dis-le et appuie-toi sur un autre document.
 
 Cadre ARIA (à privilégier pour toute question sur le modèle) :
-- `Évaluer en enseignement supérieur à l’ère de l’IA . Le modèle ARIA comme levier de transformation pédagogique (1)-1.pdf` : article de présentation du modèle ARIA.
-- `Guide pédagogique Cadre ARIA_Version mai2026.pdf` : guide complet du cadre (PDF composé d'images ; si son texte n'est pas lisible, utilise l'article ci-dessus).
-- `Atelier_ IA et l’évaluation_JP HELHa.pptx`, `Consignes Atelier IA et évaluation.pdf`, `Ressources_ Atelier_Evaluations_IA.pptx` : atelier ARIA (diaporama, déroulé, ressources).
+- `modele-aria-article-evaluer-enseignement-superieur-ere-ia.pdf` : article de présentation du modèle ARIA.
+- `guide-pedagogique-cadre-aria-2026-05.pdf` : guide complet du cadre (PDF composé d'images ; si son texte n'est pas lisible, utilise l'article ci-dessus).
+- `atelier-ia-evaluation-helha-2024.pptx`, `consignes-atelier-ia-evaluation-helha-2024.pdf`, `ressources-atelier-evaluations-ia.pptx` : atelier ARIA (diaporama, déroulé, ressources).
 
 Étape 1 – Analyser :
-- `Grille_ IA etl’évaluation_JP HELHa.pdf` : grille d'analyse des vulnérabilités d'un dispositif d'évaluation (Decamps, 2024).
-- `Grille_d_analyse__valautionIA.pdf` : grille de bonnes pratiques évaluatives (alignement, résilience à l'IAg).
+- `decamps-2024-grille-vulnerabilites-evaluation-ia.pdf` : grille d'analyse des vulnérabilités d'un dispositif d'évaluation (Decamps, 2024).
+- `grille-analyse-bonnes-pratiques-evaluatives-iag.pdf` : grille de bonnes pratiques évaluatives (alignement, résilience à l'IAg).
 
 Étape 2 – Repenser :
-- `Taxonomie-de-Bloom-IA.pdf` : taxonomie de Bloom à l'ère de l'IA (Oregon State Ecampus, 2023).
-- `Peters - 2025 Redefining assessment tasks.pdf` : redéfinir les tâches d'évaluation pour favoriser créativité et intégrité (Peters et Angelov, 2025).
-- `Evaluer les apprentissages à l'ère de l'IAG.pdf` : dix stratégies d'évaluation à l'ère de l'IAG.
-- `Evaluer à l'heure de l'IA.pdf` : guide « Évaluer à l'ère des IA » (Université de Sherbrooke).
-- `Evaluation-inclusive.pdf` et `CAST - 2024 - Directives de la conception universelle de l’apprentissage.pdf` : évaluation inclusive et conception universelle de l'apprentissage.
-- `GUIDE+DE+L'ÉVALUATION+PAR+LES+PAIRS+DANS+L’ENSEIGNEMENT+SUPÉRIEUR+(4).pdf` : évaluation par les pairs.
+- `taxonomie-bloom-ia-oregon-state-2023.pdf` : taxonomie de Bloom à l'ère de l'IA (Oregon State Ecampus, 2023).
+- `peters-angelov-2025-redefining-assessment-tasks.pdf` : redéfinir les tâches d'évaluation pour favoriser créativité et intégrité (Peters et Angelov, 2025).
+- `evaluer-apprentissages-ere-iag-10-strategies.pdf` : dix stratégies d'évaluation à l'ère de l'IAG.
+- `udes-evaluer-ere-ia-guide.pdf` : guide « Évaluer à l'ère des IA » (Université de Sherbrooke).
+- `pechard-evaluation-inclusive.pdf` et `cast-2024-directives-conception-universelle-apprentissage.pdf` : évaluation inclusive et conception universelle de l'apprentissage.
+- `guide-evaluation-par-les-pairs-enseignement-superieur.pdf` : évaluation par les pairs.
 
 Étape 3 – Intégrer :
-- `balises_utlisation_IA_4_modalites_evaluatives_SSF_UdeS.pdf` : balises d'usage de l'IAg pour quatre modalités évaluatives (Cabana et Piché, 2025).
-- `guide-utilisation-IA-enseignement-evaluation.pptx` : niveaux d'intégration de l'IA dans les activités d'enseignement et d'évaluation.
-- `Saint Anne - 2025 - POLITIQUE INSTITUTIONNELLE SUR L’UTILISATION.pdf` : exemple de politique institutionnelle sur l'usage éthique de l'IA.
-- `CahierLLL_IAG_02.pdf` : intégrer l'IA générative dans les stratégies pédagogiques (Louvain Learning Lab, 2024).
+- `cabana-piche-2025-balises-iag-4-modalites-evaluatives.pdf` : balises d'usage de l'IAg pour quatre modalités évaluatives (Cabana et Piché, 2025).
+- `guide-integration-ia-enseignement-evaluation.pptx` : niveaux d'intégration de l'IA dans les activités d'enseignement et d'évaluation.
+- `universite-sainte-anne-2025-politique-ia.pdf` : exemple de politique institutionnelle sur l'usage éthique de l'IA.
+- `louvain-learning-lab-2024-integrer-iag-strategies-pedagogiques.pdf` : intégrer l'IA générative dans les stratégies pédagogiques (Louvain Learning Lab, 2024).
 
 Étape 4 – Accompagner :
-- `Quand l’IA s’invite dans l’évaluation une aide précieuse pour enseignants et élèves. -.pdf` : usages de l'IA au service de l'évaluation et du feedback (EDHUMAN).
-- `sana-yan-2022-interleaving-retrieval-practice-promotes-science-learning.pdf` : effets de la pratique de récupération entrelacée sur l'apprentissage (Sana et Yan, 2022).
+- `edhuman-quand-ia-s-invite-dans-evaluation.pdf` : usages de l'IA au service de l'évaluation et du feedback (EDHUMAN).
+- `sana-yan-2022-interleaving-retrieval-practice.pdf` : effets de la pratique de récupération entrelacée sur l'apprentissage (Sana et Yan, 2022).

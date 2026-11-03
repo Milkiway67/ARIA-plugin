@@ -60,6 +60,8 @@ Les versions récentes de Claude Code (2.1.275 et suivantes) font les deux opér
 /plugin install aria --marketplace Milkiway67/ARIA-plugin
 ```
 
+**Import manuel d’un ZIP.** Vous pouvez aussi importer une archive ZIP du plugin dans les réglages des plugins de Claude. L’archive produite par **Code → Download ZIP** sur GitHub convient à partir de la version 0.48.1. Les versions antérieures étaient refusées à cause des noms de fichiers.
+
 Ouvrez ensuite une nouvelle session. La compétence `aria` se déclenche quand vous parlez d’évaluation et d’IA ; vous pouvez aussi l’appeler explicitement par son nom. Les manifestes se trouvent dans [`.claude-plugin/`](.claude-plugin/).
 
 ### 2. ChatGPT / Codex : installation du plugin
@@ -135,6 +137,10 @@ Le dernier exemple donne d’emblée la discipline, la tâche et la compétence 
 
 ## Historique des versions
 
+**0.48.1**
+
+- Noms des 20 documents de référence simplifiés (sans accents, espaces ni caractères spéciaux). Les anciens noms provoquaient l’erreur « Zip file contains path with invalid characters » lors de l’import du ZIP dans Claude. La correspondance avec les titres d’origine figure dans [RESSOURCES.md](RESSOURCES.md).
+
 **0.48.0**
 
 - Compétence et plugin renommés `aria` (anciennement `instructions` et `gpt-f51e0a72d0d7feb12fcfbf488fd78474`).
@@ -142,7 +148,6 @@ Le dernier exemple donne d’emblée la discipline, la tâche et la compétence 
 - Ajout des manifestes Claude Code (`.claude-plugin/`).
 - Codex : l’authentification du catalogue passe de `ON_INSTALL` à `ON_USE`, puisque le plugin ne se connecte à aucun service.
 - Correction d’une coquille dans les instructions (« évaluation »).
-- Noms des documents normalisés (accents en forme NFC) ; leur contenu est inchangé.
 
 **0.47.1+bundle.9c63f7fbd7ffb6c98f4d755741821118** — Version d’origine, exportée depuis un GPT personnalisé.
 
