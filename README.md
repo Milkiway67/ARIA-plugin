@@ -4,7 +4,7 @@ ARIA est un ensemble d’**instructions pédagogiques** (une compétence ou *ski
 
 **Autrice : Sandrine DECAMPS.** Langue : français.
 
-> **En bref.** Ce n’est pas un logiciel. Il n’y a ni code, ni serveur, ni clé API. Le plugin s’installe directement dans **Claude Code** et dans **Codex (OpenAI)**. Pour les autres outils (ChatGPT, Claude.ai, Copilot, Gemini, Le Chat…), vous recréez l’assistant à la main : vous copiez les instructions et vous ajoutez les documents. Voir [Installation selon votre outil](#installation-selon-votre-outil).
+> **En bref.** Ce n’est pas un logiciel. Il n’y a ni code, ni serveur, ni clé API. Le plugin s’installe directement dans **Claude** et dans **ChatGPT**. Pour les autres outils (Copilot, Gemini, Le Chat…), vous recréez l’assistant à la main : vous copiez les instructions et vous ajoutez les documents. Voir [Installation selon votre outil](#installation-selon-votre-outil).
 
 ---
 
