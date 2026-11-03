@@ -63,7 +63,7 @@ Ce plugin contient des instructions et des ressources ; il ne comporte pas de se
 
 ## Version et contributions
 
-Les 25 fichiers du plugin d’origine sont conservés sans modification, à partir de la version `0.47.1+bundle.9c63f7fbd7ffb6c98f4d755741821118`. Le manifeste portable, le catalogue et cette documentation ont été ajoutés pour sa diffusion sur GitHub.
+Les instructions, l’icône et les 20 documents du plugin d’origine sont conservés sans modification, à partir de la version `0.47.1+bundle.9c63f7fbd7ffb6c98f4d755741821118`. Le manifeste portable, le catalogue et cette documentation ont été ajoutés pour sa diffusion sur GitHub. L’index des ressources et les liens ont été adaptés aux noms de fichiers publiés.
 
 Pour proposer une correction ou une amélioration, ouvrez une [issue](https://github.com/Milkiway67/ARIA-plugin/issues) ou une pull request. Précisez le contexte pédagogique et le changement proposé. Conservez les crédits et les mentions de licence des ressources.
 
