@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "gpt-f51e0a72d0d7feb12fcfbf488fd78474",
+  "version": "0.47.1+bundle.9c63f7fbd7ffb6c98f4d755741821118",
+  "description": "Un assistant conversationnel pour renforcer la validité des évaluations et valoriser les compétences humaines et intégrer l’IA de manière éthique.",
+  "author": {
+    "name": "Sandrine DECAMPS"
+  },
+  "homepage": "https://github.com/Milkiway67/ARIA-plugin",
+  "repository": "https://github.com/Milkiway67/ARIA-plugin",
+  "license": "GPL-3.0-only"
+}

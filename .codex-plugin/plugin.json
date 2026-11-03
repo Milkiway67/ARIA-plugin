@@ -1,0 +1,26 @@
+{
+  "author": {
+    "name": "Sandrine DECAMPS"
+  },
+  "description": "Un assistant conversationnel pour renforcer la validité des évaluations et valoriser les compétences humaines et intégrer l’IA de manière éthique.",
+  "interface": {
+    "capabilities": [
+      "skills"
+    ],
+    "category": "Education & Research",
+    "composerIcon": "./assets/gpt-icon.png",
+    "defaultPrompt": [
+      "Qu'est-ce que le cadre ARIA ? ",
+      "Pourquoi transformer mes évaluations ? ",
+      "Aide-moi à améliorer mes évaluations"
+    ],
+    "developerName": "Sandrine DECAMPS",
+    "displayName": "Transformer l'évaluation à l'ère de l'IA",
+    "logo": "./assets/gpt-icon.png",
+    "longDescription": "Un assistant conversationnel pour renforcer la validité des évaluations et valoriser les compétences humaines et intégrer l’IA de manière éthique.",
+    "shortDescription": "Un assistant conversationnel pour renforcer la validité des évaluations et valoriser les compétences humaines et intégrer l’IA de manière éthique."
+  },
+  "name": "gpt-f51e0a72d0d7feb12fcfbf488fd78474",
+  "skills": "./skills/",
+  "version": "0.47.1+bundle.9c63f7fbd7ffb6c98f4d755741821118"
+}

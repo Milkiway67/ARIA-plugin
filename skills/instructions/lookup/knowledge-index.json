@@ -1,0 +1,85 @@
+{
+  "files": [
+    {
+      "name": "Atelier_ IA et l’évaluation_JP HELHa.pptx",
+      "path": "references/Atelier_ IA et l’évaluation_JP HELHa.pptx"
+    },
+    {
+      "name": "CAST - 2024 - Directives de la conception universelle de l’apprentissage.pdf",
+      "path": "references/CAST - 2024 - Directives de la conception universelle de l’apprentissage.pdf"
+    },
+    {
+      "name": "CahierLLL_IAG_02.pdf",
+      "path": "references/CahierLLL_IAG_02.pdf"
+    },
+    {
+      "name": "Consignes Atelier IA et évaluation.pdf",
+      "path": "references/Consignes Atelier IA et évaluation.pdf"
+    },
+    {
+      "name": "Evaluation-inclusive.pdf",
+      "path": "references/Evaluation-inclusive.pdf"
+    },
+    {
+      "name": "Evaluer les apprentissages à l'ère de l'IAG.pdf",
+      "path": "references/Evaluer les apprentissages à l'ère de l'IAG.pdf"
+    },
+    {
+      "name": "Evaluer à l'heure de l'IA.pdf",
+      "path": "references/Evaluer à l'heure de l'IA.pdf"
+    },
+    {
+      "name": "GUIDE+DE+L'ÉVALUATION+PAR+LES+PAIRS+DANS+L’ENSEIGNEMENT+SUPÉRIEUR+(4).pdf",
+      "path": "references/GUIDE+DE+L'ÉVALUATION+PAR+LES+PAIRS+DANS+L’ENSEIGNEMENT+SUPÉRIEUR+(4).pdf"
+    },
+    {
+      "name": "Grille_ IA etl’évaluation_JP HELHa.pdf",
+      "path": "references/Grille_ IA etl’évaluation_JP HELHa.pdf"
+    },
+    {
+      "name": "Grille_d_analyse__valautionIA.pdf",
+      "path": "references/Grille_d_analyse__valautionIA.pdf"
+    },
+    {
+      "name": "Guide pédagogique Cadre ARIA_Version mai2026.pdf",
+      "path": "references/Guide pédagogique Cadre ARIA_Version mai2026.pdf"
+    },
+    {
+      "name": "Peters - 2025 Redefining assessment tasks.pdf",
+      "path": "references/Peters - 2025 Redefining assessment tasks.pdf"
+    },
+    {
+      "name": "Quand l’IA s’invite dans l’évaluation une aide précieuse pour enseignants et élèves. -.pdf",
+      "path": "references/Quand l’IA s’invite dans l’évaluation une aide précieuse pour enseignants et élèves. -.pdf"
+    },
+    {
+      "name": "Ressources_ Atelier_Evaluations_IA.pptx",
+      "path": "references/Ressources_ Atelier_Evaluations_IA.pptx"
+    },
+    {
+      "name": "Saint Anne - 2025 - POLITIQUE INSTITUTIONNELLE SUR L’UTILISATION.pdf",
+      "path": "references/Saint Anne - 2025 - POLITIQUE INSTITUTIONNELLE SUR L’UTILISATION.pdf"
+    },
+    {
+      "name": "Taxonomie-de-Bloom-IA.pdf",
+      "path": "references/Taxonomie-de-Bloom-IA.pdf"
+    },
+    {
+      "name": "balises_utlisation_IA_4_modalites_evaluatives_SSF_UdeS.pdf",
+      "path": "references/balises_utlisation_IA_4_modalites_evaluatives_SSF_UdeS.pdf"
+    },
+    {
+      "name": "guide-utilisation-IA-enseignement-evaluation.pptx",
+      "path": "references/guide-utilisation-IA-enseignement-evaluation.pptx"
+    },
+    {
+      "name": "sana-yan-2022-interleaving-retrieval-practice-promotes-science-learning.pdf",
+      "path": "references/sana-yan-2022-interleaving-retrieval-practice-promotes-science-learning.pdf"
+    },
+    {
+      "name": "Évaluer en enseignement supérieur à l’ère de l’IA . Le modèle ARIA comme levier de transformation pédagogique (1)-1.pdf",
+      "path": "references/Évaluer en enseignement supérieur à l’ère de l’IA . Le modèle ARIA comme levier de transformation pédagogique (1)-1.pdf"
+    }
+  ],
+  "guidelines": "Resolve each files[].path relative to the directory containing this skill's SKILL.md (the skill root), not this index's lookup/ directory or the current working directory. Use that directory for filesystem reads or append the path unchanged to the skill's root resource URI. This index is not a complete inventory of the plugin's files. If a needed file is absent from this index or cannot be found or read at its indexed path, continue normal file discovery using the skill's available file listing or installed files; do not stop or conclude that the file is unavailable based on this index alone. This index is primarily a GPT migration helper that maps original GPT upload names to packaged filenames in the plugin."
+}

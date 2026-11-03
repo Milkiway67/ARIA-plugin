@@ -1,0 +1,20 @@
+{
+  "name": "aria",
+  "interface": {
+    "displayName": "ARIA"
+  },
+  "plugins": [
+    {
+      "name": "gpt-f51e0a72d0d7feb12fcfbf488fd78474",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    }
+  ]
+}
