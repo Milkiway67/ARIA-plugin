@@ -15,12 +15,12 @@
       "Aide-moi à améliorer mes évaluations"
     ],
     "developerName": "Sandrine DECAMPS",
-    "displayName": "Transformer l'évaluation à l'ère de l'IA",
+    "displayName": "ARIA – Évaluation et IA",
     "logo": "./assets/gpt-icon.png",
-    "longDescription": "Un assistant conversationnel pour renforcer la validité des évaluations et valoriser les compétences humaines et intégrer l’IA de manière éthique.",
-    "shortDescription": "Un assistant conversationnel pour renforcer la validité des évaluations et valoriser les compétences humaines et intégrer l’IA de manière éthique."
+    "longDescription": "Un assistant conversationnel pour renforcer la validité des évaluations, valoriser les compétences humaines et intégrer l’IA de manière éthique, selon les quatre étapes du modèle ARIA : Analyser, Repenser, Intégrer, Accompagner.",
+    "shortDescription": "Évaluer à l'ère de l'IA"
   },
   "name": "aria",
   "skills": "./skills/",
-  "version": "0.48.1"
+  "version": "0.48.2"
 }

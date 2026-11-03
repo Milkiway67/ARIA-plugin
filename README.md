@@ -60,7 +60,7 @@ Les versions récentes de Claude Code (2.1.275 et suivantes) font les deux opér
 /plugin install aria --marketplace Milkiway67/ARIA-plugin
 ```
 
-**Import manuel d’un ZIP.** Vous pouvez aussi importer une archive ZIP du plugin dans les réglages des plugins de Claude. L’archive produite par **Code → Download ZIP** sur GitHub convient à partir de la version 0.48.1. Les versions antérieures étaient refusées à cause des noms de fichiers.
+**Import manuel d’un ZIP.** Vous pouvez aussi importer une archive ZIP du plugin dans les réglages des plugins de Claude. L’archive produite par **Code → Download ZIP** sur GitHub convient à partir de la version 0.48.1. Vous pouvez aussi utiliser l’archive `dist/aria-claude.zip` produite par le script `scripts/build-zips.sh` (voir [Construire les archives d’import](#construire-les-archives-dimport)).
 
 Ouvrez ensuite une nouvelle session. La compétence `aria` se déclenche quand vous parlez d’évaluation et d’IA ; vous pouvez aussi l’appeler explicitement par son nom. Les manifestes se trouvent dans [`.claude-plugin/`](.claude-plugin/).
 
@@ -74,13 +74,25 @@ Ouvrez ensuite une nouvelle session. La compétence `aria` se déclenche quand v
 
 2. Si vous utilisez l’application de bureau, redémarrez-la si nécessaire.
 3. Ouvrez le répertoire des plugins et choisissez la source **ARIA**.
-4. Installez **Transformer l’évaluation à l’ère de l’IA**, puis ouvrez un nouveau chat.
+4. Installez **ARIA – Évaluation et IA**, puis ouvrez un nouveau chat.
 
 Remarques :
 
 - La commande et les menus peuvent changer selon votre version de Codex. Consultez la [documentation officielle sur les plugins](https://developers.openai.com/plugins/build/plugins).
 - Ce catalogue est propre au dépôt. Le plugin n’est **pas** publié dans le répertoire public d’OpenAI.
 - Les réglages de votre organisation peuvent bloquer l’installation de plugins provenant de catalogues tiers.
+
+**Import manuel d’un ZIP dans ChatGPT.** N’importez **pas** l’archive téléchargée depuis GitHub : elle contient plusieurs manifestes et catalogues, et ChatGPT la refuse avec l’erreur « Expected a single plugin archive ». Utilisez l’archive `dist/aria-chatgpt.zip`. Elle ne contient que `.codex-plugin/plugin.json`, `skills/`, `assets/` et `LICENSE`, placés à la racine de l’archive. Selon l’aide d’OpenAI, l’import de plugins peut dépendre des droits accordés par l’administrateur de votre espace de travail.
+
+#### Construire les archives d’import
+
+Sur macOS ou Linux, depuis le dossier du dépôt :
+
+```bash
+./scripts/build-zips.sh
+```
+
+Le script produit `dist/aria-chatgpt.zip` (ChatGPT) et `dist/aria-claude.zip` (Claude). Chaque archive ne contient qu’un seul manifeste de plugin.
 
 ### 3. Gemini : créer un GEM
 
@@ -129,13 +141,19 @@ Le dernier exemple donne d’emblée la discipline, la tâche et la compétence 
 | `.claude-plugin/marketplace.json` | Catalogue de distribution depuis ce dépôt | Claude Code |
 | `.codex-plugin/plugin.json` | Manifeste du plugin (nom, icône, amorces) | Codex |
 | `.agents/plugins/marketplace.json` | Catalogue de distribution depuis ce dépôt | Codex |
-| `plugin.json` | Manifeste générique | Aucun des deux clients ci-dessus |
+| `scripts/build-zips.sh` | Construction des archives d’import manuel (`dist/`) | ChatGPT, Claude |
 | `assets/gpt-icon.png` | Icône | Claude Code, Codex, GPT personnalisé |
 | `RESSOURCES.md` | Liste des documents avec liens | Lecture humaine |
 
 ---
 
 ## Historique des versions
+
+**0.48.2**
+
+- Import dans ChatGPT : ajout du script `scripts/build-zips.sh`, qui produit une archive à manifeste unique par outil. L’archive complète du dépôt provoquait l’erreur « Expected a single plugin archive ».
+- Suppression du manifeste générique `plugin.json` à la racine, lu par aucun outil.
+- Codex et ChatGPT : nom affiché (« ARIA – Évaluation et IA ») et description courte raccourcis à 30 caractères au plus.
 
 **0.48.1**
 
