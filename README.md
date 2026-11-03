@@ -97,32 +97,10 @@ Le script produit `dist/aria-chatgpt.zip` (ChatGPT) et `dist/aria-claude.zip` (C
 #### Publier une nouvelle version
 
 1. Mettez à jour le numéro de version dans `.codex-plugin/plugin.json`, `.claude-plugin/plugin.json` et `.claude-plugin/marketplace.json`, ainsi que l’historique ci-dessous.
-2. Créez la release, au choix :
-   - sur GitHub, avec une *release* dont le tag reprend ce numéro précédé de `v` (par exemple `v0.48.3`) ;
-   - ou en ligne de commande, en poussant ce tag (`git tag v0.48.3 && git push origin v0.48.3`). La release est alors créée automatiquement, avec les notes de `.github/release-notes/v0.48.3.md` si ce fichier existe.
-3. Le workflow [`.github/workflows/release.yml`](.github/workflows/release.yml) vérifie que les numéros de version concordent, construit les deux archives et les joint à la release. Les liens de téléchargement direct pointent ensuite automatiquement vers cette nouvelle version.
+2. Facultatif : rédigez les notes de version dans `.github/release-notes/vX.Y.Z.md`. Sans ce fichier, GitHub génère les notes à partir des commits.
+3. Poussez sur `main`. Le workflow [`.github/workflows/release.yml`](.github/workflows/release.yml) vérifie que les numéros de version concordent, crée la release `vX.Y.Z`, construit les deux archives et les y joint. Les liens de téléchargement direct pointent ensuite automatiquement vers cette nouvelle version.
 
-### 3. Gemini : créer un GEM
-
-1. Dans Gemini, ouvrez l'édition d'un GEM.
-2. Dans **Instructions**, collez le contenu de [`skills/aria/SKILL.md`](skills/aria/SKILL.md), **sans** l’en-tête situé entre les lignes `---`.
-3. Dans **Connaissances**, ajoutez les fichiers du dossier `skills/aria/references/`. Ce sont des PDF et des `.pptx`. Ne joignez pas le `README.md` du dossier.
-4. Facultatif : reprenez le nom, l’icône (`assets/gpt-icon.png`) et les amorces de conversation proposées dans [Exemples pour démarrer](#exemples-pour-démarrer).
-
-Il y a exactement 20 documents, ce qui peut constituer une limite pour Gemini.
-
-### 4. Claude / ChatGPT : créer un Projet
-
-1. Créez un **Projet**.
-2. Collez le contenu de `SKILL.md` (sans l’en-tête `---`) dans les **instructions du projet**.
-3. Ajoutez les documents de référence dans les **connaissances du projet**. Si la taille totale pose problème, commencez par ceux qui portent directement sur ARIA :
-   - *Évaluer en enseignement supérieur à l’ère de l’IA — Le modèle ARIA* ;
-   - *Taxonomie de Bloom IA* ;
-   - les deux grilles d’analyse.
-
-### 5. Autres assistants configurables (Copilot, Gemini, Le Chat…)
-
-Le principe est le même partout : les instructions de `SKILL.md` deviennent les instructions de l’assistant, et les documents deviennent sa base de connaissances. Les limites de taille, de nombre et de format des fichiers varient selon l’outil et l’abonnement. Vérifiez-les avant de commencer.
+Une release créée à la main sur GitHub reçoit aussi les deux archives, à condition que son tag corresponde à la version des manifestes.
 
 ---
 

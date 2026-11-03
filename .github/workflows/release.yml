@@ -1,12 +1,14 @@
-name: Archives d'import
+name: Release et archives d'import
 
-# Construit les archives d'import manuel (ChatGPT et Claude) et les joint à la
-# release du tag. Déclenché par le push d'un tag vX.Y.Z (la release est créée si
-# elle n'existe pas, avec les notes de .github/release-notes/<tag>.md si présentes)
-# ou par la publication d'une release depuis l'interface GitHub.
+# Publie automatiquement chaque version du plugin.
+# - Push sur main : si la version de .codex-plugin/plugin.json n'a pas encore de
+#   release, crée la release vX.Y.Z (notes : .github/release-notes/vX.Y.Z.md si
+#   présent, sinon notes générées) et y joint les archives d'import.
+# - Release publiée depuis l'interface GitHub : y joint les archives.
+# - Lancement manuel : reconstruit les archives d'une release existante.
 on:
   push:
-    tags: ["v*"]
+    branches: [main]
   release:
     types: [published]
   workflow_dispatch:
@@ -18,41 +20,60 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: release
+  cancel-in-progress: false
+
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     env:
-      TAG: ${{ github.event.release.tag_name || inputs.tag || github.ref_name }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ env.TAG }}
+          ref: ${{ github.event.release.tag_name || inputs.tag || github.sha }}
 
-      - name: Vérifier la cohérence des versions
+      - name: Déterminer la version
+        id: version
         run: |
-          expected="${TAG#v}"
-          for f in .codex-plugin/plugin.json .claude-plugin/plugin.json; do
-            actual=$(jq -r .version "$f")
-            if [ "$actual" != "$expected" ]; then
-              echo "::error file=$f::version $actual, attendue $expected (tag $TAG)"
+          version=$(jq -r .version .codex-plugin/plugin.json)
+          tag="${{ github.event.release.tag_name || inputs.tag }}"
+          tag="${tag:-v$version}"
+          for f in .claude-plugin/plugin.json; do
+            other=$(jq -r .version "$f")
+            if [ "$other" != "$version" ]; then
+              echo "::error file=$f::version $other différente de .codex-plugin/plugin.json ($version)"
               exit 1
             fi
           done
-
-      - name: Construire les archives
-        run: ./scripts/build-zips.sh
-
-      - name: Créer la release si nécessaire
-        run: |
-          if ! gh release view "$TAG" >/dev/null 2>&1; then
-            notes=".github/release-notes/$TAG.md"
-            if [ -f "$notes" ]; then
-              gh release create "$TAG" --title "ARIA ${TAG#v}" --notes-file "$notes" --latest
-            else
-              gh release create "$TAG" --title "ARIA ${TAG#v}" --generate-notes --latest
-            fi
+          if [ "$tag" != "v$version" ]; then
+            echo "::error::le tag $tag ne correspond pas à la version $version des manifestes"
+            exit 1
+          fi
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Arrêter si la version est déjà publiée (push sur main)
+        if: github.event_name == 'push' && steps.version.outputs.exists == 'true'
+        run: echo "La release ${{ steps.version.outputs.tag }} existe déjà ; rien à faire."
+
+      - name: Construire les archives
+        if: github.event_name != 'push' || steps.version.outputs.exists == 'false'
+        run: ./scripts/build-zips.sh
+
+      - name: Créer la release
+        if: github.event_name == 'push' && steps.version.outputs.exists == 'false'
+        run: |
+          tag="${{ steps.version.outputs.tag }}"
+          notes=".github/release-notes/$tag.md"
+          if [ -f "$notes" ]; then set -- --notes-file "$notes"; else set -- --generate-notes; fi
+          gh release create "$tag" --target "$GITHUB_SHA" --title "ARIA ${tag#v}" --latest "$@"
+
       - name: Joindre les archives à la release
-        run: gh release upload "$TAG" dist/aria-chatgpt.zip dist/aria-claude.zip --clobber
+        if: github.event_name != 'push' || steps.version.outputs.exists == 'false'
+        run: gh release upload "${{ steps.version.outputs.tag }}" dist/aria-chatgpt.zip dist/aria-claude.zip --clobber
