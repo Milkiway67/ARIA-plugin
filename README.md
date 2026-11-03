@@ -19,12 +19,6 @@ Il guide l’enseignant·e en **quatre étapes** (modèle ARIA) :
 | 3. **Intégrer** | Encadrer l’usage des outils numériques et de l’IA de façon transparente et traçable. |
 | 4. **Accompagner** | Développer chez les étudiant·es les compétences humaines et la littératie IA. |
 
-Comportements prévus par les instructions :
-
-- il pose **une seule question à la fois** et adapte ses propositions à la discipline, au niveau et aux compétences visées ;
-- il consulte les documents de référence associés à chaque étape et **cite ceux qu’il mobilise** ;
-- il **ne recommande jamais de détecteur d’IA** ;
-- il emploie le terme « enseignement supérieur » plutôt qu’« universitaire ».
 
 ### Limites à connaître
 
@@ -39,10 +33,7 @@ Comportements prévus par les instructions :
 
 | Outil | Méthode | Effort |
 | --- | --- | --- |
-| Claude Code | Installation du plugin depuis le catalogue du dépôt | Faible |
-| Codex (OpenAI) | Installation du plugin depuis le catalogue du dépôt | Faible |
-| ChatGPT (GPT personnalisé) | Recréer un GPT : instructions + 20 fichiers | Moyen |
-| Claude.ai (Projet) | Instructions du projet + documents | Moyen |
+| Claude / ChatGPT | Installation du plugin depuis le catalogue du dépôt | Faible |
 | Autres assistants configurables | Copier les instructions et joindre les documents | Moyen |
 
 Pour les méthodes manuelles, commencez par récupérer le dépôt. Sur [la page du dépôt](https://github.com/Milkiway67/ARIA-plugin), cliquez sur **Code → Download ZIP** puis décompressez l’archive. Vous pouvez aussi le cloner :
@@ -71,7 +62,7 @@ Les versions récentes de Claude Code (2.1.275 et suivantes) font les deux opér
 
 Ouvrez ensuite une nouvelle session. La compétence `aria` se déclenche quand vous parlez d’évaluation et d’IA ; vous pouvez aussi l’appeler explicitement par son nom. Les manifestes se trouvent dans [`.claude-plugin/`](.claude-plugin/).
 
-### 2. Codex (OpenAI) : installation du plugin
+### 2. ChatGPT / Codex : installation du plugin
 
 1. Ajoutez le dépôt comme source de plugins :
 
@@ -88,18 +79,17 @@ Remarques :
 - La commande et les menus peuvent changer selon votre version de Codex. Consultez la [documentation officielle sur les plugins](https://developers.openai.com/plugins/build/plugins).
 - Ce catalogue est propre au dépôt. Le plugin n’est **pas** publié dans le répertoire public d’OpenAI.
 - Les réglages de votre organisation peuvent bloquer l’installation de plugins provenant de catalogues tiers.
-- **Mise à jour depuis la version 0.47.x** : l’identifiant du plugin est passé de `gpt-f51e0a72…` à `aria`. Désinstallez l’ancienne version, puis installez la nouvelle.
 
-### 3. ChatGPT : recréer un GPT personnalisé
+### 3. Gemini : créer un GEM
 
 1. Dans ChatGPT, ouvrez **Explorer les GPT → Créer**, puis l’onglet **Configurer**.
 2. Dans **Instructions**, collez le contenu de [`skills/aria/SKILL.md`](skills/aria/SKILL.md), **sans** l’en-tête situé entre les lignes `---`.
 3. Dans **Connaissances**, ajoutez les fichiers du dossier `skills/aria/references/`. Ce sont des PDF et des `.pptx`. Ne joignez pas le `README.md` du dossier.
 4. Facultatif : reprenez le nom, l’icône (`assets/gpt-icon.png`) et les amorces de conversation proposées dans [Exemples pour démarrer](#exemples-pour-démarrer).
 
-Il y a exactement 20 documents, ce qui correspond à la limite de fichiers d’un GPT. Si vous voulez en ajouter un, il faudra en retirer un autre ou en fusionner.
+Il y a exactement 20 documents, ce qui peut constituer une limite pour Gemini.
 
-### 4. Claude.ai : créer un Projet
+### 4. Claude / ChatGPT : créer un Projet
 
 1. Créez un **Projet**.
 2. Collez le contenu de `SKILL.md` (sans l’en-tête `---`) dans les **instructions du projet**.
@@ -119,7 +109,7 @@ Le principe est le même partout : les instructions de `SKILL.md` deviennent les
 - « Qu’est-ce que le cadre ARIA ? »
 - « Pourquoi transformer mes évaluations ? »
 - « Aide-moi à améliorer mes évaluations. »
-- « J’enseigne en soins infirmiers. Aide-moi à repenser une étude de cas pour évaluer le raisonnement clinique dans un contexte où les étudiant·es utilisent l’IA. »
+- « Aide-moi à repenser une étude de cas pour évaluer le raisonnement clinique dans un contexte où les étudiant·es utilisent l’IA. »
 
 Le dernier exemple donne d’emblée la discipline, la tâche et la compétence visée. Les premiers échanges vont ainsi plus vite.
 
