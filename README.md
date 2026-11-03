@@ -96,7 +96,7 @@ Le script produit `dist/aria-chatgpt.zip` (ChatGPT) et `dist/aria-claude.zip` (C
 
 ### 3. Gemini : créer un GEM
 
-1. Dans ChatGPT, ouvrez **Explorer les GPT → Créer**, puis l’onglet **Configurer**.
+1. Dans Gemini, ouvrez l'édition d'un GEM.
 2. Dans **Instructions**, collez le contenu de [`skills/aria/SKILL.md`](skills/aria/SKILL.md), **sans** l’en-tête situé entre les lignes `---`.
 3. Dans **Connaissances**, ajoutez les fichiers du dossier `skills/aria/references/`. Ce sont des PDF et des `.pptx`. Ne joignez pas le `README.md` du dossier.
 4. Facultatif : reprenez le nom, l’icône (`assets/gpt-icon.png`) et les amorces de conversation proposées dans [Exemples pour démarrer](#exemples-pour-démarrer).
