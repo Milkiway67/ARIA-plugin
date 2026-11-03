@@ -1,4 +1,0 @@
-interface:
-  default_prompt: 'Qu''est-ce que le cadre ARIA ? '
-  display_name: Transformer l'évaluation à l'ère de l'IA
-  short_description: Un assistant conversationnel pour renforcer la validité des éval

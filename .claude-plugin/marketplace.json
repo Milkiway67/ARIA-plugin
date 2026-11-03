@@ -1,0 +1,16 @@
+{
+  "name": "aria",
+  "description": "Catalogue du plugin ARIA : transformer l’évaluation dans l’enseignement supérieur à l’ère de l’IA.",
+  "owner": {
+    "name": "Sandrine DECAMPS"
+  },
+  "plugins": [
+    {
+      "name": "aria",
+      "source": "./",
+      "description": "Transformer l’évaluation à l’ère de l’IA : accompagnement en quatre étapes (Analyser, Repenser, Intégrer, Accompagner).",
+      "version": "0.48.0",
+      "category": "education"
+    }
+  ]
+}
