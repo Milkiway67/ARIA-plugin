@@ -97,7 +97,9 @@ Le script produit `dist/aria-chatgpt.zip` (ChatGPT) et `dist/aria-claude.zip` (C
 #### Publier une nouvelle version
 
 1. Mettez à jour le numéro de version dans `.codex-plugin/plugin.json`, `.claude-plugin/plugin.json` et `.claude-plugin/marketplace.json`, ainsi que l’historique ci-dessous.
-2. Sur GitHub, créez une *release* dont le tag reprend ce numéro précédé de `v` (par exemple `v0.48.3`).
+2. Créez la release, au choix :
+   - sur GitHub, avec une *release* dont le tag reprend ce numéro précédé de `v` (par exemple `v0.48.3`) ;
+   - ou en ligne de commande, en poussant ce tag (`git tag v0.48.3 && git push origin v0.48.3`). La release est alors créée automatiquement, avec les notes de `.github/release-notes/v0.48.3.md` si ce fichier existe.
 3. Le workflow [`.github/workflows/release.yml`](.github/workflows/release.yml) vérifie que les numéros de version concordent, construit les deux archives et les joint à la release. Les liens de téléchargement direct pointent ensuite automatiquement vers cette nouvelle version.
 
 ### 3. Gemini : créer un GEM

@@ -1,8 +1,12 @@
 name: Archives d'import
 
-# À chaque publication d'une release, construit les archives d'import manuel
-# (ChatGPT et Claude) et les joint à la release.
+# Construit les archives d'import manuel (ChatGPT et Claude) et les joint à la
+# release du tag. Déclenché par le push d'un tag vX.Y.Z (la release est créée si
+# elle n'existe pas, avec les notes de .github/release-notes/<tag>.md si présentes)
+# ou par la publication d'une release depuis l'interface GitHub.
 on:
+  push:
+    tags: ["v*"]
   release:
     types: [published]
   workflow_dispatch:
@@ -18,7 +22,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      TAG: ${{ github.event.release.tag_name || inputs.tag || github.ref_name }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
@@ -38,6 +42,17 @@ jobs:
 
       - name: Construire les archives
         run: ./scripts/build-zips.sh
+
+      - name: Créer la release si nécessaire
+        run: |
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            notes=".github/release-notes/$TAG.md"
+            if [ -f "$notes" ]; then
+              gh release create "$TAG" --title "ARIA ${TAG#v}" --notes-file "$notes" --latest
+            else
+              gh release create "$TAG" --title "ARIA ${TAG#v}" --generate-notes --latest
+            fi
+          fi
 
       - name: Joindre les archives à la release
         run: gh release upload "$TAG" dist/aria-chatgpt.zip dist/aria-claude.zip --clobber
