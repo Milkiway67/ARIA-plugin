@@ -1,0 +1,43 @@
+name: Archives d'import
+
+# À chaque publication d'une release, construit les archives d'import manuel
+# (ChatGPT et Claude) et les joint à la release.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag de la release à compléter (ex. v0.48.2)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+
+      - name: Vérifier la cohérence des versions
+        run: |
+          expected="${TAG#v}"
+          for f in .codex-plugin/plugin.json .claude-plugin/plugin.json; do
+            actual=$(jq -r .version "$f")
+            if [ "$actual" != "$expected" ]; then
+              echo "::error file=$f::version $actual, attendue $expected (tag $TAG)"
+              exit 1
+            fi
+          done
+
+      - name: Construire les archives
+        run: ./scripts/build-zips.sh
+
+      - name: Joindre les archives à la release
+        run: gh release upload "$TAG" dist/aria-chatgpt.zip dist/aria-claude.zip --clobber

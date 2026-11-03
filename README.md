@@ -60,7 +60,7 @@ Les versions récentes de Claude Code (2.1.275 et suivantes) font les deux opér
 /plugin install aria --marketplace Milkiway67/ARIA-plugin
 ```
 
-**Import manuel d’un ZIP.** Vous pouvez aussi importer une archive ZIP du plugin dans les réglages des plugins de Claude. L’archive produite par **Code → Download ZIP** sur GitHub convient à partir de la version 0.48.1. Vous pouvez aussi utiliser l’archive `dist/aria-claude.zip` produite par le script `scripts/build-zips.sh` (voir [Construire les archives d’import](#construire-les-archives-dimport)).
+**Import manuel d’un ZIP.** Vous pouvez aussi importer une archive ZIP du plugin dans les réglages des plugins de Claude. L’archive produite par **Code → Download ZIP** sur GitHub convient à partir de la version 0.48.1. Le plus simple est de télécharger directement **[aria-claude.zip](https://github.com/Milkiway67/ARIA-plugin/releases/latest/download/aria-claude.zip)** (dernière version). Les archives des versions précédentes sont disponibles sur la [page des versions](https://github.com/Milkiway67/ARIA-plugin/releases).
 
 Ouvrez ensuite une nouvelle session. La compétence `aria` se déclenche quand vous parlez d’évaluation et d’IA ; vous pouvez aussi l’appeler explicitement par son nom. Les manifestes se trouvent dans [`.claude-plugin/`](.claude-plugin/).
 
@@ -82,7 +82,7 @@ Remarques :
 - Ce catalogue est propre au dépôt. Le plugin n’est **pas** publié dans le répertoire public d’OpenAI.
 - Les réglages de votre organisation peuvent bloquer l’installation de plugins provenant de catalogues tiers.
 
-**Import manuel d’un ZIP dans ChatGPT.** N’importez **pas** l’archive téléchargée depuis GitHub : elle contient plusieurs manifestes et catalogues, et ChatGPT la refuse avec l’erreur « Expected a single plugin archive ». Utilisez l’archive `dist/aria-chatgpt.zip`. Elle ne contient que `.codex-plugin/plugin.json`, `skills/`, `assets/` et `LICENSE`, placés à la racine de l’archive. Selon l’aide d’OpenAI, l’import de plugins peut dépendre des droits accordés par l’administrateur de votre espace de travail.
+**Import manuel d’un ZIP dans ChatGPT.** N’importez **pas** l’archive téléchargée depuis GitHub : elle contient plusieurs manifestes et catalogues, et ChatGPT la refuse avec l’erreur « Expected a single plugin archive ». Téléchargez directement **[aria-chatgpt.zip](https://github.com/Milkiway67/ARIA-plugin/releases/latest/download/aria-chatgpt.zip)** (dernière version ; versions précédentes sur la [page des versions](https://github.com/Milkiway67/ARIA-plugin/releases)). Cette archive contient que `.codex-plugin/plugin.json`, `skills/`, `assets/` et `LICENSE`, placés à la racine de l’archive. Selon l’aide d’OpenAI, l’import de plugins peut dépendre des droits accordés par l’administrateur de votre espace de travail.
 
 #### Construire les archives d’import
 
@@ -93,6 +93,12 @@ Sur macOS ou Linux, depuis le dossier du dépôt :
 ```
 
 Le script produit `dist/aria-chatgpt.zip` (ChatGPT) et `dist/aria-claude.zip` (Claude). Chaque archive ne contient qu’un seul manifeste de plugin.
+
+#### Publier une nouvelle version
+
+1. Mettez à jour le numéro de version dans `.codex-plugin/plugin.json`, `.claude-plugin/plugin.json` et `.claude-plugin/marketplace.json`, ainsi que l’historique ci-dessous.
+2. Sur GitHub, créez une *release* dont le tag reprend ce numéro précédé de `v` (par exemple `v0.48.3`).
+3. Le workflow [`.github/workflows/release.yml`](.github/workflows/release.yml) vérifie que les numéros de version concordent, construit les deux archives et les joint à la release. Les liens de téléchargement direct pointent ensuite automatiquement vers cette nouvelle version.
 
 ### 3. Gemini : créer un GEM
 
@@ -142,6 +148,7 @@ Le dernier exemple donne d’emblée la discipline, la tâche et la compétence 
 | `.codex-plugin/plugin.json` | Manifeste du plugin (nom, icône, amorces) | Codex |
 | `.agents/plugins/marketplace.json` | Catalogue de distribution depuis ce dépôt | Codex |
 | `scripts/build-zips.sh` | Construction des archives d’import manuel (`dist/`) | ChatGPT, Claude |
+| `.github/workflows/release.yml` | Ajout automatique des archives à chaque release | GitHub Actions |
 | `assets/gpt-icon.png` | Icône | Claude Code, Codex, GPT personnalisé |
 | `RESSOURCES.md` | Liste des documents avec liens | Lecture humaine |
 
@@ -152,6 +159,7 @@ Le dernier exemple donne d’emblée la discipline, la tâche et la compétence 
 **0.48.2**
 
 - Import dans ChatGPT : ajout du script `scripts/build-zips.sh`, qui produit une archive à manifeste unique par outil. L’archive complète du dépôt provoquait l’erreur « Expected a single plugin archive ».
+- Archives d’import en téléchargement direct sur la [page des versions](https://github.com/Milkiway67/ARIA-plugin/releases), jointes automatiquement à chaque release.
 - Suppression du manifeste générique `plugin.json` à la racine, lu par aucun outil.
 - Codex et ChatGPT : nom affiché (« ARIA – Évaluation et IA ») et description courte raccourcis à 30 caractères au plus.
 
